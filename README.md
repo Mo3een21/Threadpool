@@ -2,11 +2,11 @@
 Threadpool for multi-uses in C.
 Creator: Moeen Abu Katish
 
-<<Introduction>>
+[Introduction]
 This project is a multi-threaded thread pool implementation in C, providing a framework for managing and executing asynchronous tasks efficiently. The thread pool allows users to submit tasks for execution, which are then processed by a pool of worker threads. This README provides an overview of the features, usage, and design of the thread pool implementation.
 
 
-<<Functionality Overview>>
+[Functionality Overview]
 
 ==create_threadpool(int num_threads_in_pool)==
 
@@ -48,7 +48,7 @@ Signals worker threads to exit gracefully and cleans up resources.
 Example task function that represents the work to be done by worker threads.
 Can be replaced with custom task functions depending on the application's requirements.
 
-<<Features>>
+[Features]
 
 Dynamically allocates and manages a pool of threads.
 Enqueues tasks for asynchronous execution by worker threads.
@@ -58,12 +58,12 @@ Gracefully handles shutdown and destruction of the thread pool.
 Thread Pool Overview:
 The thread pool implementation consists of the following components and functionalities:
 
-<<Threadpool Creation>>
+[Threadpool Creation]
 
 Creates a thread pool with a specified number of worker threads.
 Initializes mutex and conditional variables for synchronization.
 
-<<Task Enqueueing>>
+[Task Enqueueing]
 
 Allows users to enqueue tasks for asynchronous execution.
 Ensures thread safety during task enqueueing operations.
@@ -72,12 +72,12 @@ Task Execution:
 Worker threads continuously wait for tasks to be enqueued.
 Upon receiving a task, a worker thread dequeues and executes it.
 
-<<Threadpool Destruction>>
+[Threadpool Destruction]
 
 Gracefully shuts down the thread pool upon destruction.
 Waits for ongoing tasks to complete before terminating worker threads.
 
-<<Error Handling>>
+[Error Handling]
 
 Provides error messages for failed operations, such as memory allocation and thread creation.
 
@@ -99,7 +99,7 @@ Once compiled, you can run the program with the desired arguments. Here's an exa
 ./threadpool 5 10 15
 
 
-<<In this command>>:
+[In this command]:
 
 5 represents the size of the thread pool, indicating that there will be 5 worker threads in the pool.
 10 represents the number of tasks to be dispatched to the thread pool.
